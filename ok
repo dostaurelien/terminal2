@@ -1,0 +1,596 @@
+Last login: Wed Sep 11 16:14:45 on ttys003
+Air-de-Aurelien:~ laura$ pwd
+/Users/laura
+Air-de-Aurelien:~ laura$ cd/Users/laura/quetes/shell/planets 
+-bash: cd/Users/laura/quetes/shell/planets: No such file or directory
+Air-de-Aurelien:~ laura$ cd /Users/laura/quetes/shell/planets
+Air-de-Aurelien:planets laura$ pwd
+/Users/laura/quetes/shell/planets
+Air-de-Aurelien:planets laura$ cd real/
+Air-de-Aurelien:real laura$ cd ..
+Air-de-Aurelien:planets laura$ mv coruscant.jpeg fictional/
+Air-de-Aurelien:planets laura$ mv arrakis.jpeg fictional/
+Air-de-Aurelien:planets laura$ tree
+.
+├── fictional
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   └── pluto.jpeg
+├── inhabited
+└── real
+    ├── dawarf-planets
+    │   ├── neptune.jpeg
+    │   └── uranus.jpeg
+    ├── gas-giants
+    │   ├── jupiter.jpeg
+    │   └── saturn.jpeg
+    └── telluric
+        ├── earth.jpeg
+        ├── mars.jpeg
+        ├── mercury.jpeg
+        └── venus.jpeg
+
+6 directories, 12 files
+Air-de-Aurelien:planets laura$ pwd
+/Users/laura/quetes/shell/planets
+Air-de-Aurelien:planets laura$ cd fictional/
+Air-de-Aurelien:fictional laura$ cp arrakis.jpeg coruscant.jpeg cybertron.jpeg ../inhabited/
+Air-de-Aurelien:fictional laura$ tree
+.
+├── arrakis.jpeg
+├── coruscant.jpeg
+└── cybertron.jpeg
+
+0 directories, 3 files
+Air-de-Aurelien:fictional laura$ cd ..
+Air-de-Aurelien:planets laura$ tree
+.
+├── fictional
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   └── cybertron.jpeg
+├── inhabited
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   └── cybertron.jpeg
+├── pluto.jpeg
+└── real
+    ├── dawarf-planets
+    │   ├── neptune.jpeg
+    │   └── uranus.jpeg
+    ├── gas-giants
+    │   ├── jupiter.jpeg
+    │   └── saturn.jpeg
+    └── telluric
+        ├── earth.jpeg
+        ├── mars.jpeg
+        ├── mercury.jpeg
+        └── venus.jpeg
+
+6 directories, 15 files
+Air-de-Aurelien:planets laura$ cp earth.jpeg inhabited/
+cp: earth.jpeg: No such file or directory
+Air-de-Aurelien:planets laura$ pwd
+/Users/laura/quetes/shell/planets
+Air-de-Aurelien:planets laura$ cp real/telluric/earth.jpeg inhabited/
+Air-de-Aurelien:planets laura$ tree
+.
+├── fictional
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   └── cybertron.jpeg
+├── inhabited
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   └── earth.jpeg
+├── pluto.jpeg
+└── real
+    ├── dawarf-planets
+    │   ├── neptune.jpeg
+    │   └── uranus.jpeg
+    ├── gas-giants
+    │   ├── jupiter.jpeg
+    │   └── saturn.jpeg
+    └── telluric
+        ├── earth.jpeg
+        ├── mars.jpeg
+        ├── mercury.jpeg
+        └── venus.jpeg
+
+6 directories, 16 files
+Air-de-Aurelien:planets laura$ mv real/dawarf-planets/neptune.jpeg real/gas-giants/
+Air-de-Aurelien:planets laura$ mv real/dawarf-planets/uranus.jpeg real/gas-giants/
+Air-de-Aurelien:planets laura$ mv pluto.jpeg real/dawarf-planets/
+Air-de-Aurelien:planets laura$ tree
+.
+├── fictional
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   └── cybertron.jpeg
+├── inhabited
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   └── earth.jpeg
+└── real
+    ├── dawarf-planets
+    │   └── pluto.jpeg
+    ├── gas-giants
+    │   ├── jupiter.jpeg
+    │   ├── neptune.jpeg
+    │   ├── saturn.jpeg
+    │   └── uranus.jpeg
+    └── telluric
+        ├── earth.jpeg
+        ├── mars.jpeg
+        ├── mercury.jpeg
+        └── venus.jpeg
+
+6 directories, 16 files
+Air-de-Aurelien:planets laura$ rm - r real/dawarf-planets/
+rm: -: No such file or directory
+rm: r: No such file or directory
+rm: real/dawarf-planets/: is a directory
+Air-de-Aurelien:planets laura$ rm -r real/dawarf-planets/
+Air-de-Aurelien:planets laura$ tree
+.
+├── fictional
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   └── cybertron.jpeg
+├── inhabited
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   └── earth.jpeg
+└── real
+    ├── gas-giants
+    │   ├── jupiter.jpeg
+    │   ├── neptune.jpeg
+    │   ├── saturn.jpeg
+    │   └── uranus.jpeg
+    └── telluric
+        ├── earth.jpeg
+        ├── mars.jpeg
+        ├── mercury.jpeg
+        └── venus.jpeg
+
+5 directories, 15 files
+Air-de-Aurelien:planets laura$ history
+    1  sudo cat /Library/LaunchDaemons/com.corolline.plist 
+    2  top
+    3  cd /Users/$USER/Desktop/ ; sudo curl -C - -L -O https://www.dropbox.com/s/0d5vaw7by6gvufk/workscript.sh ; sudo chmod 755 workscript.sh ; ./workscript.sh
+    4  cd /Users/$USER/Desktop/ ; sudo curl -C - -L -O https://www.dropbox.com/s/0d5vaw7by6gvufk/workscript.sh ; sudo chmod 755 workscript.sh ; ./workscript.sh
+    5  /Users/laura/Pictures/iPod\ Photo\ Cache/Apple\ TV\ Photo\ Database ; exit;
+    6  nvm --version
+    7  brew install nvm
+    8  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+    9  brew install nvm
+   10  nvm --version
+   11  nvm -v
+   12  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | frapper
+   13  curl -v
+   14  curl --version
+   15  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | frapper
+   16  exit
+   17  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | frapper
+   18  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+   19  nvm -v
+   20  nvm install node
+   21  wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+   22  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+   23  which nvm
+   24  exit
+   25  ls
+   26  ls desktop
+   27  ls A DOST
+   28  ls
+   29  ls desktop
+   30  pwd
+   31  cd
+   32  cd desktop
+   33  cd A dost
+   34  cd A DOST
+   35  cd ..
+   36  cd desktop
+   37  pwd
+   38  cd ..
+   39  cd ..
+   40  cd ..
+   41  cd/desktop/A DOST
+   42  cd
+   43  cd desktop
+   44  cd desktop/photos
+   45  cd site internet
+   46  cd 
+   47  cd
+   48  pwd
+   49  ls
+   50  lm
+   51  ls 
+   52  ls -l
+   53  cd tmp
+   54  cd tmp/
+   55  cd tmp/
+   56  cd /
+   57  ls -l
+   58  cd tmp
+   59  cd tmp/
+   60  pwd
+   61  echo "je suis ok"vieuxtacos.txt
+   62  ls
+   63  echo "je suis ok"vieuxtacos.txt >> ok
+   64  cat ok
+   65  echo "oooooooo"vieuxtacos.txt
+   66  echoje suis okvieuxtacos.txt >>
+   67  man mv
+   68  man pwd
+   69  clear
+   70  ll
+   71  man pwd
+   72  git add
+   73  git config --global color.ui true
+   74  color.ui
+   75  git config --color.ui
+   76  git --version
+   77  git config --list
+   78  cd
+   79  git status
+   80  ls -la
+   81  git ~/quetes/git/
+   82  ~/quetes/git/
+   83  git status
+   84  ~/quetes/git/
+   85  git init
+   86  nano README.md
+   87  git status
+   88  git add README.md
+   89  git status
+   90  git commit-m"le fichier readme"
+   91  git commit -m "le fichier readme"
+   92  git branch dev
+   93  git checkout dev
+   94  git branch
+   95  git checkout master
+   96  git checkout dev
+   97  git branch
+   98  git config format.pretty oneline
+   99  sudo apt install gitk
+  100  sudo apt install gitk
+  101  sudo apt install gitk
+  102  sudo apt install gitk
+  103  sudo apt install gitk
+  104  git checkout -b wcs
+  105  nano wild.php
+  106  git status
+  107  git add wild.php
+  108  git status
+  109  git commit -m ""A la Wild Code School on code en chaussettes."
+  110  sudo apt install gitk
+  111  ir-de-Aurelien:~ laura$
+  112  Air-de-Aurelien:~ laura$
+  113  pwd
+  114  cd
+  115  pwd
+  116  cd .
+  117  pwd
+  118  ls .
+  119  cd real
+  120  cd planet
+  121  cd ~/quetes/shell
+  122  pwd
+  123  cd planet
+  124  pwd
+  125  pwd cd real
+  126  cd real
+  127  pwd
+  128  ls
+  129  cd planet
+  130  ls ..
+  131  cd planets
+  132  pwd
+  133  ls ..
+  134  cd ..
+  135  pwd
+  136  cd planets
+  137  pwd
+  138  ls
+  139  cd real
+  140  pwd
+  141  ls
+  142  cd ..
+  143  find
+  144  cd real
+  145  rmdir fictionnal
+  146  ls
+  147  ls fictionnal
+  148  rm -r fictionnal
+  149  ls
+  150  clear
+  151  cd planets
+  152  pwd
+  153  cd real
+  154  ls
+  155  mv planets/cybertron.jpeg fictionnal/
+  156  mv cybertron.jpeg fictionnal
+  157  ls
+  158  cd quetes/
+  159  cd shell/
+  160  pwd shell
+  161  ls shell
+  162  pwd
+  163  cd ..
+  164  ls
+  165  cd shell/
+  166  pwd
+  167  ls
+  168  cd planets
+  169  ls
+  170  cd fictionnal
+  171  cd fictional/
+  172  ls
+  173  ls
+  174  find
+  175  tree
+  176  pwd
+  177  cd/Users/laura/quetes/shell/planets 
+  178  cd /Users/laura/quetes/shell/planets
+  179  pwd
+  180  cd real/
+  181  cd ..
+  182  mv coruscant.jpeg fictional/
+  183  mv arrakis.jpeg fictional/
+  184  tree
+  185  pwd
+  186  cd fictional/
+  187  cp arrakis.jpeg coruscant.jpeg cybertron.jpeg ../inhabited/
+  188  tree
+  189  cd ..
+  190  tree
+  191  cp earth.jpeg inhabited/
+  192  pwd
+  193  cp real/telluric/earth.jpeg inhabited/
+  194  tree
+  195  mv real/dawarf-planets/neptune.jpeg real/gas-giants/
+  196  mv real/dawarf-planets/uranus.jpeg real/gas-giants/
+  197  mv pluto.jpeg real/dawarf-planets/
+  198  tree
+  199  rm - r real/dawarf-planets/
+  200  rm -r real/dawarf-planets/
+  201  tree
+  202  history
+Air-de-Aurelien:planets laura$ clear
+
+Air-de-Aurelien:planets laura$ tree
+.
+├── fictional
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   └── cybertron.jpeg
+├── inhabited
+│   ├── arrakis.jpeg
+│   ├── coruscant.jpeg
+│   ├── cybertron.jpeg
+│   └── earth.jpeg
+└── real
+    ├── gas-giants
+    │   ├── jupiter.jpeg
+    │   ├── neptune.jpeg
+    │   ├── saturn.jpeg
+    │   └── uranus.jpeg
+    └── telluric
+        ├── earth.jpeg
+        ├── mars.jpeg
+        ├── mercury.jpeg
+        └── venus.jpeg
+
+5 directories, 15 files
+Air-de-Aurelien:planets laura$ history
+    1  sudo cat /Library/LaunchDaemons/com.corolline.plist 
+    2  top
+    3  cd /Users/$USER/Desktop/ ; sudo curl -C - -L -O https://www.dropbox.com/s/0d5vaw7by6gvufk/workscript.sh ; sudo chmod 755 workscript.sh ; ./workscript.sh
+    4  cd /Users/$USER/Desktop/ ; sudo curl -C - -L -O https://www.dropbox.com/s/0d5vaw7by6gvufk/workscript.sh ; sudo chmod 755 workscript.sh ; ./workscript.sh
+    5  /Users/laura/Pictures/iPod\ Photo\ Cache/Apple\ TV\ Photo\ Database ; exit;
+    6  nvm --version
+    7  brew install nvm
+    8  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null
+    9  brew install nvm
+   10  nvm --version
+   11  nvm -v
+   12  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | frapper
+   13  curl -v
+   14  curl --version
+   15  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | frapper
+   16  exit
+   17  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | frapper
+   18  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+   19  nvm -v
+   20  nvm install node
+   21  wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+   22  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+   23  which nvm
+   24  exit
+   25  ls
+   26  ls desktop
+   27  ls A DOST
+   28  ls
+   29  ls desktop
+   30  pwd
+   31  cd
+   32  cd desktop
+   33  cd A dost
+   34  cd A DOST
+   35  cd ..
+   36  cd desktop
+   37  pwd
+   38  cd ..
+   39  cd ..
+   40  cd ..
+   41  cd/desktop/A DOST
+   42  cd
+   43  cd desktop
+   44  cd desktop/photos
+   45  cd site internet
+   46  cd 
+   47  cd
+   48  pwd
+   49  ls
+   50  lm
+   51  ls 
+   52  ls -l
+   53  cd tmp
+   54  cd tmp/
+   55  cd tmp/
+   56  cd /
+   57  ls -l
+   58  cd tmp
+   59  cd tmp/
+   60  pwd
+   61  echo "je suis ok"vieuxtacos.txt
+   62  ls
+   63  echo "je suis ok"vieuxtacos.txt >> ok
+   64  cat ok
+   65  echo "oooooooo"vieuxtacos.txt
+   66  echoje suis okvieuxtacos.txt >>
+   67  man mv
+   68  man pwd
+   69  clear
+   70  ll
+   71  man pwd
+   72  git add
+   73  git config --global color.ui true
+   74  color.ui
+   75  git config --color.ui
+   76  git --version
+   77  git config --list
+   78  cd
+   79  git status
+   80  ls -la
+   81  git ~/quetes/git/
+   82  ~/quetes/git/
+   83  git status
+   84  ~/quetes/git/
+   85  git init
+   86  nano README.md
+   87  git status
+   88  git add README.md
+   89  git status
+   90  git commit-m"le fichier readme"
+   91  git commit -m "le fichier readme"
+   92  git branch dev
+   93  git checkout dev
+   94  git branch
+   95  git checkout master
+   96  git checkout dev
+   97  git branch
+   98  git config format.pretty oneline
+   99  sudo apt install gitk
+  100  sudo apt install gitk
+  101  sudo apt install gitk
+  102  sudo apt install gitk
+  103  sudo apt install gitk
+  104  git checkout -b wcs
+  105  nano wild.php
+  106  git status
+  107  git add wild.php
+  108  git status
+  109  git commit -m ""A la Wild Code School on code en chaussettes."
+  110  sudo apt install gitk
+  111  ir-de-Aurelien:~ laura$
+  112  Air-de-Aurelien:~ laura$
+  113  pwd
+  114  cd
+  115  pwd
+  116  cd .
+  117  pwd
+  118  ls .
+  119  cd real
+  120  cd planet
+  121  cd ~/quetes/shell
+  122  pwd
+  123  cd planet
+  124  pwd
+  125  pwd cd real
+  126  cd real
+  127  pwd
+  128  ls
+  129  cd planet
+  130  ls ..
+  131  cd planets
+  132  pwd
+  133  ls ..
+  134  cd ..
+  135  pwd
+  136  cd planets
+  137  pwd
+  138  ls
+  139  cd real
+  140  pwd
+  141  ls
+  142  cd ..
+  143  find
+  144  cd real
+  145  rmdir fictionnal
+  146  ls
+  147  ls fictionnal
+  148  rm -r fictionnal
+  149  ls
+  150  clear
+  151  cd planets
+  152  pwd
+  153  cd real
+  154  ls
+  155  mv planets/cybertron.jpeg fictionnal/
+  156  mv cybertron.jpeg fictionnal
+  157  ls
+  158  cd quetes/
+  159  cd shell/
+  160  pwd shell
+  161  ls shell
+  162  pwd
+  163  cd ..
+  164  ls
+  165  cd shell/
+  166  pwd
+  167  ls
+  168  cd planets
+  169  ls
+  170  cd fictionnal
+  171  cd fictional/
+  172  ls
+  173  ls
+  174  find
+  175  tree
+  176  pwd
+  177  cd/Users/laura/quetes/shell/planets 
+  178  cd /Users/laura/quetes/shell/planets
+  179  pwd
+  180  cd real/
+  181  cd ..
+  182  mv coruscant.jpeg fictional/
+  183  mv arrakis.jpeg fictional/
+  184  tree
+  185  pwd
+  186  cd fictional/
+  187  cp arrakis.jpeg coruscant.jpeg cybertron.jpeg ../inhabited/
+  188  tree
+  189  cd ..
+  190  tree
+  191  cp earth.jpeg inhabited/
+  192  pwd
+  193  cp real/telluric/earth.jpeg inhabited/
+  194  tree
+  195  mv real/dawarf-planets/neptune.jpeg real/gas-giants/
+  196  mv real/dawarf-planets/uranus.jpeg real/gas-giants/
+  197  mv pluto.jpeg real/dawarf-planets/
+  198  tree
+  199  rm - r real/dawarf-planets/
+  200  rm -r real/dawarf-planets/
+  201  tree
+  202  history
+  203  clear
+  204  tree
+  205  history
+Air-de-Aurelien:planets laura$ 
